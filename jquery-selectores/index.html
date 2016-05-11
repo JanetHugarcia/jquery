@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery-Selectores</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Selectores</h1>
+				<hr>
+				<p>Ingresa el selector necesario para que se iluminen los elementos en cada opción.</p>
+				<div class="execute">
+					<input type="text" name ="selector"id="principal">
+					<button id="befored">Anterior</button>
+					<button id="nexted">Siguiente</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="myid">This sentence is in <code>&lt;div id="myid"&gt;</code>. It is followed by a horizontal rule.</div>
+				<hr>
+				<p>This a paragraph, which means it is wrapped in <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>. Those "p" tags in the previous sentence are formatted as <code>&lt;code&gt;</code>.</p>
+
+				<ul>
+					<li>This is the first list item (<code>&lt;li&gt;</code>) in an unordered list (<code>&lt;ul&gt;</code>).</li>
+					<li>This is the secondo list item. It has a <a href="#">link</a> in it.</li> 
+					<li class="myclass otherclass">This is the third list item. It has a class of "myclass otherclass"</li>
+					<li>This is the fourth list item. It has <strong>strong</strong> text and <em>emphasized text.</em></li>
+						<ul>
+							<li>second-level list item 1</li>
+							<li>second-level list item 2</li>
+						</ul>
+				</ul>
+				<p class="myclass"><code>&lt;p class="myclass"&gt;</code>This is another paragraph. It has class="myclass" Otherwise, nothing <strong>special</strong> about it at all.</p>
+				<p>This is a pragraph, which means it is wrapped in <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>. Those "p" tags in the previous sentence are formatted as <code>&lt;code&gt;</code>.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<input type="text" value="text input">
+				<input type="text" disabled="disabled" placeholder="disabled text input">
+				<input type="password" value="password">
+				<select>
+					<option >Select list w/ options</option>
+					<option >Another option</option>
+					<option>A third option</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<textarea name="comentario" id="" cols="30" rows="10" placeholder="This is a textarea"></textarea>
+			</div>
+			<div class="col-md-2">
+				<select size="5">
+					<option >Select list w/ options</option>
+					<option selected="selected" >Another option</option>
+					<option>A third option</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div>
+					<input type="radio" checked="true"> Radio Checked<br>
+					<input type="radio" checked="false"> Radio Not Checked 
+				</div>
+				
+				<div>
+					<input type="checkbox" checked="true"> Checkbox Checked<br>
+					<input type="checkbox" checked="false"> Checkbox Not Checked<br>
+					<input type="checkbox" checked="false"> Another checkbox Not Checked
+				</div>
+				<div>
+					<button>Submit input</button>
+					<button>Button input</button>
+					<button>Reset input</button>
+					<button type="image" src="select-form_files/image.gif">Image input</button>
+					<button>Button button</button>
+					<button>Seleccionar archivo</button>
+					Ningún archivo seleccionado
+				</div>
+			</div>
+		</div>
+		
+		
+
+
+
+
+	</div>
+	<!-- Javascript -->
+	<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
