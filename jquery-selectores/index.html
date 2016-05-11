@@ -14,7 +14,7 @@
 				<hr>
 				<p>Ingresa el selector necesario para que se iluminen los elementos en cada opción.</p>
 				<div class="execute">
-					<input type="text" name ="selector"id="principal">
+					<input type="text"name ="selector"id="principal">
 					<button id="befored">Anterior</button>
 					<button id="nexted">Siguiente</button>
 				</div>
@@ -30,13 +30,14 @@
 
 				<ul>
 					<li>This is the first list item (<code>&lt;li&gt;</code>) in an unordered list (<code>&lt;ul&gt;</code>).</li>
-					<li>This is the secondo list item. It has a <a href="#">link</a> in it.</li> 
-					<li class="myclass otherclass">This is the third list item. It has a class of "myclass otherclass"</li>
-					<li>This is the fourth list item. It has <strong>strong</strong> text and <em>emphasized text.</em></li>
+					<li>This is the secondo list item. It has a <a title="Learning jQuery blog" rel="self" href="/archives/jquery-links.zip">link</a> in it.</li> 
+					<li class="myclass otherclass">This is the third list item. It has a <code>class</code> of "myclass otherclass"</li>
+					<li>This is the fourth list item. It has <strong>strong</strong> text and <em>emphasized text.</em>
 						<ul>
 							<li>second-level list item 1</li>
 							<li>second-level list item 2</li>
 						</ul>
+					</li>
 				</ul>
 				<p class="myclass"><code>&lt;p class="myclass"&gt;</code>This is another paragraph. It has class="myclass" Otherwise, nothing <strong>special</strong> about it at all.</p>
 				<p>This is a pragraph, which means it is wrapped in <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>. Those "p" tags in the previous sentence are formatted as <code>&lt;code&gt;</code>.</p>
@@ -67,23 +68,24 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div>
-					<input type="radio" checked="true"> Radio Checked<br>
-					<input type="radio" checked="false"> Radio Not Checked 
+					<input type="radio" name="radio" checked="true"> Radio Checked
+					<input type="radio" name="radio" > Radio Not Checked 
 				</div>
 				
 				<div>
-					<input type="checkbox" checked="true"> Checkbox Checked<br>
-					<input type="checkbox" checked="false"> Checkbox Not Checked<br>
-					<input type="checkbox" checked="false"> Another checkbox Not Checked
+
+					<input type="checkbox" name="botones" checked="true"> Checkbox Checked<br>
+					<input type="checkbox" name="botones" > Checkbox Not Checked<br>
+					<input type="checkbox" name="botones" > Another checkbox Not Checked
 				</div>
 				<div>
-					<button>Submit input</button>
-					<button>Button input</button>
-					<button>Reset input</button>
-					<button type="image" src="select-form_files/image.gif">Image input</button>
+					<input type="submit" value="Submit input">
+					<input type="button" value="Button input">
+					<input type="reset" value="Reset input">
+					<input type="image" src="select-form_files/image.gif" value="Image input">
 					<button>Button button</button>
-					<button>Seleccionar archivo</button>
-					Ningún archivo seleccionado
+					<input type="file" name="fileinput" value="file input" id="fileinput">	
+					
 				</div>
 			</div>
 		</div>
