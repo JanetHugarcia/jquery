@@ -1,5 +1,9 @@
 $(document).ready(function(){
-
+	function NuevaPropiedad(){
+		$('.boton').attr("disabled",true);
+		$('p span').text("x").addClass('azul');
+		c=0;
+	}
 	for(var i=1;i<=3;i++){
 		var claseFila =  i;
 		$('#padre').append("<div class='" + claseFila + "'></div>");
@@ -9,54 +13,66 @@ $(document).ready(function(){
 			
 	}
 	var c = 0;
-	$('.boton').text("+");
+
+	$('p span').text("x").addClass('azul');
+	$('.boton').text("+").addClass('negro');
+
 	$('.boton').click(function(){
 		c++;
 		if(c % 2){
 			$(this).each(function(){
-				$(this).text("x").css('color','blue');
+				$('.boton').removeClass('negro');
+				$(this).text("x").addClass('azul');
 				$(this).attr("disabled",true);
+				$('p span').text("o").addClass('azul');
+				$('p span').text("o").addClass('rojo');
+				
 			})
 		}else{
 			$(this).each(function(){
-				$(this).text("o").css('color','red');;
+				$('.boton').removeClass('negro');
+				$(this).text("o").addClass('rojo');;
 				$(this).attr("disabled",true);
-				
+				$('p span').text("x").removeClass('rojo');
+				$('p span').text("x").addClass('azul');
 			})
+
 		}
 
 		if( $('#11').text()!="+" && $('#11').text()==$('#22').text()  && $('#11').text()==$('#33').text()){
-				alert(" Ganó: "+$('#11').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#11').text());
+				NuevaPropiedad();
 		}
 		if( $('#13').text()!="+" && $('#13').text()==$('#22').text()  && $('#13').text()==$('#31').text()){
-				alert(" Ganó: "+$('#13').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#13').text());
+				NuevaPropiedad();
 		}
 		if( $('#11').text()!="+" && $('#11').text()==$('#12').text()  && $('#11').text()==$('#13').text()){
-				alert(" Ganó: "+$('#11').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#11').text() );
+				NuevaPropiedad();
 		}
 		if( $('#11').text()!="+" && $('#11').text()==$('#21').text()  && $('#11').text()==$('#31').text()){
-				alert(" Ganó: "+$('#11').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#11').text() );
+				NuevaPropiedad();
 		}
 		if( $('#12').text()!="+" && $('#12').text()==$('#22').text()  && $('#12').text()==$('#32').text()){
-				alert(" Ganó: "+$('#12').text() );
-				$('.boton').attr("disabled",true);
-
+				$('p').text(" Ganó: "+$('#12').text() );
+				NuevaPropiedad();
 		}
 		if( $('#13').text()!="+" && $('#13').text()==$('#23').text()  && $('#13').text()==$('#33').text()){
-				alert(" Ganó: "+$('#13').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#13').text() );
+				NuevaPropiedad();
 		}
 		if( $('#21').text()!="+" && $('#21').text()==$('#22').text()  && $('#21').text()==$('#23').text()){
-				alert(" Ganó: "+$('#21').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#21').text() );
+				NuevaPropiedad();
 		}
 		if( $('#31').text()!="+" && $('#31').text()==$('#32').text()  && $('#31').text()==$('#33').text()){
-				alert(" Ganó: "+$('#31').text() );
-				$('.boton').attr("disabled",true);
+				$('p').text(" Ganó: "+$('#31').text() );
+				NuevaPropiedad();
+		}
+		if(c==9){
+			$('p').text(" Empate " );
 		}
 		// var temp = $('#11').text();
 		// var esigual=true;
@@ -75,8 +91,14 @@ $(document).ready(function(){
 	});
 
 	$('.btnNew').click(function(){
-		$('.boton').text("+").css('color','black');
+		$('.boton').removeClass('azul');
+		$('.boton').removeClass('rojo');
+		$('.boton').text("+").addClass('negro');
 		$('.boton').attr("disabled",false);
+		$('p').text("Turno: Jugador ").addClass('negro');
+		$('p').append("<span id='turno'></span>")
+		$('#turno').text("x").addClass('azul');
+		c = 0;
 	});
 	
 

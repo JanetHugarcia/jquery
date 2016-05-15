@@ -4,6 +4,19 @@ h1{
 	margin:0;
 	padding:10px;
 }
+p{
+	font-size: 30px;
+	font-weight: 400;
+}
+.negro{
+	color:black;
+}
+.azul{
+	color:blue;
+}
+.rojo{
+	color:red;
+}
 #padre{
 	margin-top: 20px;
 	margin-bottom: 20px;
